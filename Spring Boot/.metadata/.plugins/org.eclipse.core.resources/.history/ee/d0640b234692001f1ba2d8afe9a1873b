@@ -1,0 +1,33 @@
+package com.senai.tarefas.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.senai.tarefas.model.TarefaCategoria;
+import com.senai.tarefas.model.Usuario;
+import com.senai.tarefas.repository.TarefaCategoriaRepository;
+
+
+@Controller
+public class TarefaCategoriaController {
+	
+	@Autowired
+	private TarefaCategoriaRepository tarefaCategoriaRepository;
+	
+	@GetMapping("/listarTarefaCategoria")
+	public String listarTarefas(Model modelo) {
+		modelo.addAttribute("tarefasCategoria", tarefaCategoriaRepository.findAll());
+		return "tarefaCategoria";
+	}
+	
+	@GetMapping("/novaCategoria")
+	public String novaTarefaCategoria(Model modelo) {
+		modelo.addAttribute("tarefaCategoria", new TarefaCategoria());
+		return "formularioTarefas";
+	}
+	
+	
+	
+}

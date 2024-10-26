@@ -1,0 +1,17 @@
+package com.senai.tarefas.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.senai.tarefas.repository.UsuarioRepository;
+
+@Controller
+public class TarefaCategoriaController {
+	
+	private TarefaCategoriaRepository tarefaCategoriaRepository;
+	
+	@GetMapping("/listarTarefaCategoria")
+	public String listarTarefas() {
+		return "tarefaCategoria";
+	}
+}
