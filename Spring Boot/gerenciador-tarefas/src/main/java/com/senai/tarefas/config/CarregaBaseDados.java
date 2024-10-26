@@ -49,6 +49,10 @@ public class CarregaBaseDados {
 			TarefaCategoria categoria1 = new TarefaCategoria();
 			categoria1.setNome("pesquisa");
 			categoriaRepository.save(categoria1);
+
+			TarefaCategoria categoria2 = new TarefaCategoria();
+			categoria2.setNome("apresentação");
+			categoriaRepository.save(categoria2);
 			
 			Tarefa tarefa = new Tarefa();
 			tarefa.setDescricao("Estudar Spring Boot");

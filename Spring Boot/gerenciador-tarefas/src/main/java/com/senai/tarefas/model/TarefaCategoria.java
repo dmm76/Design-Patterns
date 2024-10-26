@@ -10,8 +10,10 @@ public class TarefaCategoria {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
 	private int id;
 	private String nome;
+
 	public int getId() {
 		return id;
 	}
@@ -24,7 +26,12 @@ public class TarefaCategoria {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
-	
 
+	@Override
+	public String toString() {
+		return "TarefaCategoria{" +
+				"id=" + id +
+				", nome='" + nome + '\'' +
+				'}';
+	}
 }
