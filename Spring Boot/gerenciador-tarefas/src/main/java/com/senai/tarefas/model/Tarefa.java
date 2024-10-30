@@ -17,11 +17,9 @@ public class Tarefa {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	
-	
+
 	private String descricao;
-	
-	
+
 	public int getId() {
 		return id;
 	}
