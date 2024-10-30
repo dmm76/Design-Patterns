@@ -22,7 +22,6 @@ public class Tarefa {
 	private String descricao;
 	
 	
-	
 	public int getId() {
 		return id;
 	}
@@ -102,7 +101,18 @@ public class Tarefa {
 	@ManyToOne
 	@JoinColumn(name="usuario_id")
 	private Usuario usuario;
-	
-	
 
+	@Override
+	public String toString() {
+		return "Tarefa{" +
+				"id=" + id +
+				", descricao='" + descricao + '\'' +
+				", status=" + status +
+				", dataEntrega=" + dataEntrega +
+				", prioridade=" + prioridade +
+				", visivel=" + visivel +
+				", categoria=" + categoria +
+				", usuario=" + usuario +
+				'}';
+	}
 }
